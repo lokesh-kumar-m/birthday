@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Waiting Game</title>
+    <link rel="icon" href="icn.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kreon:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="train.css">
+    <script type="text/javascript">
+      if(window.localStorage.getItem('count')=='undefine')
+      {
+        window.localStorage.setItem('count',0);
+      }
+      else{
+        var c =window.localStorage.getItem('count');
+        c++;
+        window.localStorage.setItem('count',c);
+      }
+    </script>
+  </head>
+  <body>
+  <div class="train">
+    <div class="toy-train">
+      <div class="engine">
+        <div class="window">
+          <div class="engine-main">
+            <div class="smokes">
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="engine-body">
+          <div class="wheels">
+            <div class="big-wheel"></div>
+            <div class="normal-wheel"></div>
+          </div>
+        </div>
+      </div>
+      <div class="locomotive">
+        <div class="suprise"></div>
+        <div class="wheels">
+          <div class="normal-wheel"></div>
+          <div class="normal-wheel"></div>
+        </div>
+      </div>
+      <div class="ribbon1"></div>
+      <div class="ribbon2"></div>
+      <div class="tracks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+   <center>
+    <div class="time">
+      <div class="row">
+        <div class="col col-lg-3 col-md-3 col-sm-6 col-12">
+          <div class="card days">
+            <p id="days"></p>
+            <p class="timeheading">Days</p>
+          </div>
+        </div>
+        <div class="col col-lg-3 col-md-3 col-sm-6 col-12">
+          <div class="card hours">
+            <p id="hours"></p>
+            <p class="timeheading">Hours</p>
+          </div>
+        </div>
+        <div class="col col-lg-3 col-md-3 col-sm-6 col-12">
+          <div class="card minutes">
+            <p id="minutes"></p>
+            <p class="timeheading">Minutes</p>
+          </div>
+        </div>
+        <div class="col col-lg-3 col-md-3 col-sm-6 col-12">
+          <div class="card seconds">
+            <p id="seconds"></p>
+            <p class="timeheading">Seconds</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </center>
+ <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <p class="modal-title text-center" id="modalTitle">Happy Birthday!!</p>
+      <div class="modal-body">
+        <p class="text-center modaltext1">Hope your special day brings you</p>
+        <p class="text-center modaltext1">all that your heart desires! Here’s wishing you a</p>
+        <p class="text-center modaltext1">day full of pleasant surprises.It’s my wish to</p>
+        <p class="text-center modaltext1">make sure your birthday is one of the most special</p>
+        <p class="text-center modaltext1">days ever.Wishing you a day filled</p>
+        <p class="text-center modaltext1"> with happiness and a year filled with joy</p>
+        <p class="text-center modaltext2">Enjoy the Celebration!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger btn-sm" onclick="playsong()" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="bday">
+    <div class="birthday-card">
+      <div class="cake">
+       <div class="velas">
+         <div class="candle"></div>
+         <div class="candle"></div>
+         <div class="candle"></div>
+         <div class="candle"></div>
+         <div class="candle"></div>
+       </div>
+       <div class="cream"></div>
+       <div class="cakelayers"></div>
+      </div>
+    </div>
+    <p class="text-center caketxt"> happy birthday! </p>
+    <p class="text-center caketxt"> Friend </p>
+    <br>
+  </div>
+  <div class="textfrperson">
+    <div class="m card">
+      <div class="heart">
+        <i class='he1 fas fa-heart'></i>
+        <i class='he2 fas fa-heart'></i>
+        <i class='he3 fas fa-heart'></i>
+      </div>
+      <p class="wishes">
+        <b>Dear bff</b><br>
+       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;I can't thankyou enough for being my best friend and i'm
+       very blessed to have you in my life.On your birthday may all that you asked from
+       God be granted to you!. Always keep smiling the way you do! Have an amazing day and
+       an even more special year ahead. May God Bless you.Always keep smiling,coz sadness doesn't suit your face kid,
+       Happy Birthday to my friend.
+       <br>
+       <br>
+       <b class="text-right">your's supportive,<br>dot.. </b>
+     </p>
+    </div>
+    <div class="a card">
+      <div class="heart">
+        <i class='he1 fas fa-heart'></i>
+        <i class='he2 fas fa-heart'></i>
+        <i class='he3 fas fa-heart'></i>
+      </div>
+      <p class="wishes">
+        <b>Dear bff</b><br>
+        I can't thankyou enough for being my bff and i'm
+        very blessed to have you in my life.
+        Birthdays come around every year,but friends like you only come once in a lifetime.
+      I'm so glad you came into my life. Best wishes on your special day.
+      Happy Birthday to my best friend, who is better than the best of the best!
+       may your special day be better than the best you’ve ever celebrated.</p>
+    </div>
+  </div>
+ <div class="photosection">
+   <div class="photos">
+   <div class="mySlides fade1">
+     <img src="p1.jpeg">
+   </div>
+   <div class="mySlides fade1">
+     <img src="p2.jpeg">
+   </div>
+   <div class="mySlides fade1">
+     <img src="p3.jpeg">
+   </div>
+   <div class="mySlides fade1">
+     <img src="p4.jpeg">
+   </div>
+   <div class="mySlides fade1">
+     <img src="p5.jpeg">
+   </div>
+   <div class="mySlides fade1">
+     <img src="p6.jpeg">
+   </div>
+   </div>
+   <a class="prev text-center" onclick="plusSlides(-1)"><i class="fas fa-arrow-left"></i></a>
+   <a class="next text-center" onclick="plusSlides(1)"><i class="fas fa-arrow-right"></i></a>
+   <div class="dots">
+     <span class="dot" onclick="currentSlide(1)"></span>
+     <span class="dot" onclick="currentSlide(2)"></span>
+     <span class="dot" onclick="currentSlide(3)"></span>
+     <span class="dot" onclick="currentSlide(4)"></span>
+     <span class="dot" onclick="currentSlide(5)"></span>
+     <span class="dot" onclick="currentSlide(6)"></span>
+   </div>
+ </div>
+<div class="facesection">
+  <div class="face">
+    <div class="leye"><div class="lbubble" id='lefteye'></div></div>
+    <div class="reye"><div class="rbubble" id='righteye'></div></div>
+    <div class="mouth"></div>
+  </div>
+  <p class="face-text text-center">Hey you...<br>hi i'm minne...seems like you are excited</p>
+</div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="bday.js" charset="utf-8"></script>
+    </body>
+  </html>
+<!-- On this wonderful day may all things go
+the way you like them,I wish you have
+a lovely day and a fabulous year
+filled with success,joy,love
+may your special day be full of beautiful,
+magical and unforgettable moments!
+I may not be by your side celebrating your special day with you, but I want you to know that I’m thinking of you and wishing you a wonderful birthday.-->
